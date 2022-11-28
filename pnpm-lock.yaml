@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@dimforge/rapier3d-compat': ^0.10.0
   '@fontsource/fira-mono': ^4.5.0
+  '@fontsource/quicksand': ^4.5.11
+  '@fontsource/rubik-distressed': ^4.5.0
   '@neoconfetti/svelte': ^1.0.0
   '@playwright/test': 1.25.0
   '@sveltejs/adapter-netlify': 1.0.0-next.84
@@ -12,6 +14,7 @@ specifiers:
   '@threlte/extras': ^4.8.0
   '@threlte/preprocess': ^0.0.2
   '@threlte/rapier': ^0.5.0
+  '@tweakpane/core': ^1.1.0
   '@types/cookie': ^0.5.1
   '@types/three': ^0.146.0
   '@typescript-eslint/eslint-plugin': ^5.27.0
@@ -34,18 +37,23 @@ specifiers:
   tailwindcss: ^3.1.5
   three: ^0.146.0
   tslib: ^2.3.1
+  tweakpane: ^3.1.0
   typescript: ^4.7.4
   vite: ^3.1.0
 
 dependencies:
   '@sveltejs/adapter-netlify': 1.0.0-next.84
+  '@tweakpane/core': 1.1.0
+  tweakpane: 3.1.0
 
 devDependencies:
   '@dimforge/rapier3d-compat': 0.10.0
   '@fontsource/fira-mono': 4.5.10
+  '@fontsource/quicksand': 4.5.11
+  '@fontsource/rubik-distressed': 4.5.0
   '@neoconfetti/svelte': 1.0.0
   '@playwright/test': 1.25.0
-  '@sveltejs/kit': 1.0.0-next.561_svelte@3.53.1+vite@3.2.4
+  '@sveltejs/kit': 1.0.0-next.564_svelte@3.53.1+vite@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   '@threlte/core': 5.0.2
   '@threlte/extras': 4.8.0_three@0.146.0
@@ -117,6 +125,14 @@ packages:
 
   /@fontsource/fira-mono/4.5.10:
     resolution: {integrity: sha512-bxUnRP8xptGRo8YXeY073DSpfK74XpSb0ZyRNpHV9WvLnJ7TwPOjZll8hTMin7zLC6iOp59pDZ8EQDj1gzgAQQ==}
+    dev: true
+
+  /@fontsource/quicksand/4.5.11:
+    resolution: {integrity: sha512-SdgbixomUPBMjv+QZH72XsyJMY/P/XzEEFl7KCop+lAuBfy1fiqX+RyMheHhdNfR6Uk8MJla0iyb1ngcJXD0gw==}
+    dev: true
+
+  /@fontsource/rubik-distressed/4.5.0:
+    resolution: {integrity: sha512-svvZBSxum//ZjuX8EZoav+Ak3QMimfcLUKi04QsCBXnD0JAx0cI45uBxJeSrjhpCpzf8mOWOfIy/lXZdIuuHxQ==}
     dev: true
 
   /@humanwhocodes/config-array/0.11.7:
@@ -205,8 +221,8 @@ packages:
       set-cookie-parser: 2.5.1
     dev: false
 
-  /@sveltejs/kit/1.0.0-next.561_svelte@3.53.1+vite@3.2.4:
-    resolution: {integrity: sha512-N8HQvS6gcm7R78ADfM4xjhuFS3Ir+Ezce3De8WOnISXQ1tS2npc5LMH9LRHHi14nfosAfJ7vUlcLwLE6N/I7+Q==}
+  /@sveltejs/kit/1.0.0-next.564_svelte@3.53.1+vite@3.2.4:
+    resolution: {integrity: sha512-j5X8NVA+ros3YDaybsrybnsZasrsMKacAhLGll36SGkBDagCQANlY6O5B7fxP0FrejiuN6ZLh0hnROGsl5qAlQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -226,7 +242,7 @@ packages:
       sirv: 2.0.2
       svelte: 3.53.1
       tiny-glob: 0.2.9
-      undici: 5.12.0
+      undici: 5.13.0
       vite: 3.2.4
     transitivePeerDependencies:
       - diff-match-patch
@@ -287,6 +303,10 @@ packages:
   /@threlte/rapier/0.5.0:
     resolution: {integrity: sha512-+lZ24lPdKLyXZA4iQvRl8prpQF9ARRaETm1EtkRCZSZm8NjSNKcpD6Gk5hCsI0PQbzCavY2FOrSvCPUbBuQgTA==}
     dev: true
+
+  /@tweakpane/core/1.1.0:
+    resolution: {integrity: sha512-vbbiQb+aoFI13lIbE7DJvhHZVE1YlUpGoaAamSpU6wLp2jA3VowS1wfRJBBB8IBCYm7nF6ULl7zfJKxl1XdyfA==}
+    dev: false
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
@@ -2155,6 +2175,10 @@ packages:
       typescript: 4.9.3
     dev: true
 
+  /tweakpane/3.1.0:
+    resolution: {integrity: sha512-PGAp/LPQdHwzL7/iAW4lV1p9iPQTti7YMjMWO48CoYjvZRS59RmgQnhEGzKzqST1JnmOYmQUjTe8bdhlZRJs5A==}
+    dev: false
+
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2173,8 +2197,8 @@ packages:
     hasBin: true
     dev: true
 
-  /undici/5.12.0:
-    resolution: {integrity: sha512-zMLamCG62PGjd9HHMpo05bSLvvwWOZgGeiWlN/vlqu3+lRo3elxktVGEyLMX+IO7c2eflLjcW74AlkhEZm15mg==}
+  /undici/5.13.0:
+    resolution: {integrity: sha512-UDZKtwb2k7KRsK4SdXWG7ErXiL7yTGgLWvk2AXO1JMjgjh404nFo6tWSCM2xMpJwMPx3J8i/vfqEh1zOqvj82Q==}
     engines: {node: '>=12.18'}
     dependencies:
       busboy: 1.6.0

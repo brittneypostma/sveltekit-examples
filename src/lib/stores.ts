@@ -13,7 +13,3 @@ const createWritableStore = (key: string, startValue: string | object) => {
 		}
 	};
 };
-
-export const theme = {};
-
-export const themeStore = createWritableStore('theme', '');

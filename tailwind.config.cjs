@@ -1,6 +1,6 @@
 const config = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
-
+  darkMode: ['class'],
   theme: {
     extend: {
       border: {
@@ -8,7 +8,7 @@ const config = {
       },
       fontFamily: {
         'sans': ['Quicksand', 'sans-serif'],
-        'display': ['Rubik Distressed', 'serif'],
+        'display': ['Rubik Distressed', 'cursive'],
       }
     }
   },
