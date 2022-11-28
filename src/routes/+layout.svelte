@@ -6,7 +6,7 @@
 <div class="app">
 	<Header />
 
-	<main>
+	<main class="h-full">
 		<slot />
 	</main>
 
