@@ -26,7 +26,7 @@
 
 <button
 	aria-label="Toggle Theme"
-	class="p-2 ml-1 flex items-center justify-center rounded-lg"
+	class="py-1 ml-1 flex items-center justify-center rounded-lg"
 	on:click={toggleTheme}
 >
 	{#if isDarkMode}

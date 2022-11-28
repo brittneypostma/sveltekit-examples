@@ -59,7 +59,7 @@
 	}
 
   a, button {
-    @apply ring-yellow-400 transition-all hover:ring-2 p-2 rounded-lg;
+    @apply ring-yellow-400 transition-all hover:ring-2 py-1 rounded-lg inline;
   }
 
 	a:hover {

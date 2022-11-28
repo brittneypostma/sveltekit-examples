@@ -1,7 +1,5 @@
-import { getPosts } from './posts';
+import { redirect } from '@sveltejs/kit';
 
-export const load = async () => {
-	return {
-		posts: getPosts().map((post) => post.metadata)
-	};
-};
+export async function load() {
+	throw redirect(300, '/blog/introduction');
+}
