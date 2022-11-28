@@ -4,7 +4,7 @@ date: 11/27/2022
 slug: mdsvex-example
 ---
 
-# Counter
+## Counter
 
 <script>
   import Counter from '../../Counter.svelte'
