@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	const links = ['/', '/about', '/sverdle', '/blog', '/threlte'];
+	const links = ['/', '/about', '/sverdle', 'edge', '/blog', '/threlte'];
 </script>
 
 <nav>

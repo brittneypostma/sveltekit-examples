@@ -16,6 +16,6 @@ export const load = async ({ params }: LayoutLoadEvent) => {
 	}
 	return {
 		posts: getPosts().map((post) => post.metadata),
-		post: post.component
+		post
 	};
 };
