@@ -1,11 +1,9 @@
-import type { PageServerLoad } from './$types';
-
 import { dev } from '$app/environment';
 
 export const csr = dev;
 
-export const load: PageServerLoad = async (event: RequestEvent) => {
-	const context: Context = event.platform?.context;
+export const load = async (event) => {
+	const context = event.platform?.context;
 	let locationLabel;
 	try {
 		// break out individual pieces
