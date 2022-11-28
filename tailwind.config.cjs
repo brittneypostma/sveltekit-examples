@@ -8,7 +8,7 @@ const config = {
       },
       fontFamily: {
         'sans': ['Quicksand', 'sans-serif'],
-        'display': ['Rubik Distressed', 'serif'],
+        'display': ['Rubik Distressed', 'cursive'],
       }
     }
   },
