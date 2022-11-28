@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Lato:ital,wght@0,300;0,400;0,900;1,400&family=Quicksand:wght@300;400;600&family=Righteous&family=Roboto:wght@400;700&display=swap');
-@import './prism.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
 	@import '@fontsource/fira-mono';
+  @import './prism.css';
 
 	:root {
 		--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -28,7 +27,6 @@
 		margin: 0;
 		background-attachment: fixed;
     /* bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 */
-    @apply bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-100 via-slate-500 to-slate-700 dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-slate-400 dark:via-slate-600 dark:to-slate-900;
 		/* background-color: var(--color-bg-1);
 		background-size: 100vw 100vh;
 		background-image: radial-gradient(
@@ -59,6 +57,10 @@
 		color: var(--color-theme-1);
 		text-decoration: none;
 	}
+
+  a, button {
+    @apply ring-yellow-400 transition-all hover:ring-2 p-2 rounded-lg;
+  }
 
 	a:hover {
 		text-decoration: underline;
