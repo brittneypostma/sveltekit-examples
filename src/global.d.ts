@@ -1,3 +1,5 @@
+type Theme = 'system' | 'light' | 'dark';
+
 export interface ThemeStore {
 	/** List of all available theme names */
 	themes: string[];

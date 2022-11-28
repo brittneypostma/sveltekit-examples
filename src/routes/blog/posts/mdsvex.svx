@@ -1,0 +1,24 @@
+---
+title: This is an Example of MDSvex
+date: 11/27/2022
+slug: mdsvex-example
+---
+
+# Counter
+
+<script>
+  import Counter from '../../Counter.svelte'
+</script>
+
+This is a Counter component imported while using markdown.
+
+<section>
+  <Counter />
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+  }
+</style>
