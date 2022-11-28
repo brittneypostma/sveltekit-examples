@@ -1,6 +1,5 @@
 <script>
 	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Nav from './Nav.svelte';
 </script>
@@ -12,7 +11,7 @@
 		</a>
 	</div>
 
-	<div class="absolute inset-0 mx-auto">
+	<div class="absolute inset-0 mx-auto z-40">
 		<Nav />
 	</div>
 
@@ -28,7 +27,7 @@
 	</div>
 </header>
 
-<style>
+<style lang="postcss">
 	header {
 		padding-inline: 1rem;
 		display: flex;
@@ -36,8 +35,6 @@
 	}
 
 	.corner {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
+		@apply flex items-center z-50 gap-4 pt-2;
 	}
 </style>

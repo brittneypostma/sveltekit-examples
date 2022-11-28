@@ -46,9 +46,7 @@
 	 */
 	function update(event: MouseEvent) {
 		const guess = data.guesses[i];
-		const key = (event.target as HTMLButtonElement).getAttribute(
-			'data-key'
-		);
+		const key = (event.target as HTMLButtonElement).getAttribute('data-key');
 
 		if (key === 'backspace') {
 			data.guesses[i] = guess.slice(0, -1);
@@ -77,6 +75,8 @@
 	<title>Sverdle</title>
 	<meta name="description" content="A Wordle clone written in SvelteKit" />
 </svelte:head>
+
+<h1>Sverdle</h1>
 
 <form
 	method="POST"

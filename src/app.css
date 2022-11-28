@@ -58,6 +58,10 @@
 		text-decoration: none;
 	}
 
+  a, button {
+    @apply ring-yellow-400 transition-all hover:ring-2 p-2 rounded-lg;
+  }
+
 	a:hover {
 		text-decoration: underline;
 	}
