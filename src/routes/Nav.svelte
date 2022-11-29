@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	const links = ['/', '/about', '/sverdle', 'edge', '/blog', '/threlte'];
+	const links = ['/', '/about', '/sverdle', '/edge', '/cats', '/blog', '/threlte'];
 </script>
 
 <nav>
@@ -10,7 +10,9 @@
 	<ul>
 		{#each links as link}
 			<li aria-current={$page.url.pathname === `${link}` ? 'page' : undefined}>
-				<a href={link}>{link === '/' ? 'Home' : link.replace('/', '').toUpperCase()}</a>
+				<a data-sveltekit-preload-data="hover" href={link}
+					>{link === '/' ? 'Home' : link.replace('/', '').toUpperCase()}</a
+				>
 			</li>
 		{/each}
 	</ul>

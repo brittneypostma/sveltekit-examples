@@ -15,17 +15,7 @@ export const load = async (event) => {
 		const locale = options.locale;
 		// const locale = ipData.languages.split(',')[0] || 'id-ID';
 		// const locale = `en-${countryCode}` || 'en-GB';
-		const timezone = context?.geo?.timezone || 'Asia/Jakarta'; //  'America/New_York'
-		// date.getTimezoneOffset();
-		const intlTimezone = options.timeZone;
-		console.log(
-			{ context },
-			{ options },
-			{ intlTimezone },
-			{ countryCode },
-			{ locale },
-			{ timezone }
-		);
+		const timezone = context?.geo?.timezone || 'America/New_York'; //  'America/New_York'
 
 		// Generate a formatted time string
 		const time = new Date().toLocaleString(locale, {

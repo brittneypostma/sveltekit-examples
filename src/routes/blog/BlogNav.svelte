@@ -7,7 +7,7 @@
 >
 	<nav class="grid gap-1">
 		{#each nav as { title, slug }}
-			<a data-sveltekit-prefetch href={`/blog/${slug}`}>
+			<a data-sveltekit-preload-data="hover" data-sveltekit-reload href={`/blog/${slug}`}>
 				{title}
 			</a>
 		{/each}

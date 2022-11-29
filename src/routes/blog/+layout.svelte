@@ -7,7 +7,7 @@
 <div class="flex">
 	<BlogNav nav={data.posts} />
 	<main
-		class="bg-slate-300 lg:ml-[30rem] text-black dark:text-white dark:bg-slate-900 rounded-lg p-8 h-full"
+		class="bg-slate-300 lg:ml-64 text-black dark:text-white dark:bg-slate-900 rounded-lg p-8 h-full"
 	>
 		<slot />
 	</main>
