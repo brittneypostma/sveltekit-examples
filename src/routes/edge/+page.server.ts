@@ -7,8 +7,8 @@ export const load = async (event) => {
 	let locationLabel;
 	try {
 		// break out individual pieces
-		const city = context?.geo?.city || 'nowhere';
-		const country = context?.geo?.country?.name || 'MI';
+		const city = context?.geo?.city || '';
+		const country = context?.geo?.country?.name || '';
 		locationLabel = `${city}, ${country}`;
 		const options = Intl.DateTimeFormat().resolvedOptions();
 		const locale = options.locale;

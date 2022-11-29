@@ -4,28 +4,14 @@
 	export let data: LayoutData;
 </script>
 
-<div class="grid">
-	<BlogNav nav={data.posts} />
+<section class="grid items-stretch w-full gap-4  max-w-[80ch] mx-auto">
 	<main
-		class="bg-slate-300 lg:ml-64 text-black dark:text-white dark:bg-slate-900 rounded-lg p-8 h-full"
+		class="grid gap-6 flex-grow-1 content-start overflow-auto w-full bg-slate-300 mx-auto text-black dark:text-white dark:bg-slate-900 rounded-lg p-8 h-full xl:ml-[10rem] 2xl:ml-auto"
 	>
 		<slot />
 	</main>
-</div>
+	<BlogNav nav={data.posts} />
+</section>
 
 <style>
-	div {
-		margin-left: -10rem;
-		grid-template-columns: 24rem 1fr;
-		width: 100vw;
-	}
-	main {
-		max-width: 80ch;
-		grid-column: 1/-1;
-		display: grid;
-		gap: 2rem;
-		flex-grow: 1;
-		align-content: start;
-		overflow: auto;
-	}
 </style>

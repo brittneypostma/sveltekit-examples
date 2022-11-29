@@ -3,7 +3,7 @@
 </script>
 
 <aside
-	class="hidden overflow-auto lg:block fixed inset-0 pl-20 pr-10 py-20 bg-slate-700 text-white w-96"
+	class="rounded-lg w-full overflow-auto inset-0 pl-20 pr-10 py-20 bg-slate-700 text-white xl:w-96 xl:fixed xl:rounded-none"
 >
 	<nav class="grid gap-1">
 		{#each nav as { title, slug }}
