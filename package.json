@@ -40,6 +40,7 @@
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
+		"prisma": "^4.6.1",
 		"remark": "^14.0.2",
 		"svelte": "^3.46.0",
 		"svelte-check": "^2.7.1",

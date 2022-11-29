@@ -31,6 +31,7 @@ specifiers:
   postcss-load-config: ^4.0.1
   prettier: ^2.6.2
   prettier-plugin-svelte: ^2.7.0
+  prisma: ^4.6.1
   remark: ^14.0.2
   svelte: ^3.46.0
   svelte-check: ^2.7.1
@@ -55,7 +56,7 @@ devDependencies:
   '@fontsource/rubik-distressed': 4.5.0
   '@neoconfetti/svelte': 1.0.0
   '@playwright/test': 1.25.0
-  '@sveltejs/kit': 1.0.0-next.564_svelte@3.53.1+vite@3.2.4
+  '@sveltejs/kit': 1.0.0-next.567_svelte@3.53.1+vite@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   '@threlte/core': 5.0.2
   '@threlte/extras': 4.8.0_three@0.146.0
@@ -77,6 +78,7 @@ devDependencies:
   postcss-load-config: 4.0.1_postcss@8.4.19
   prettier: 2.8.0
   prettier-plugin-svelte: 2.8.1_3ndnxlh52lolrqe4kgjgbxb3xa
+  prisma: 4.6.1
   remark: 14.0.2
   svelte: 3.53.1
   svelte-check: 2.9.2_g7z2chviobwh5b53nr2x4mtdq4
@@ -217,6 +219,11 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
+  /@prisma/engines/4.6.1:
+    resolution: {integrity: sha512-3u2/XxvxB+Q7cMXHnKU0CpBiUK1QWqpgiBv28YDo1zOIJE3FCF8DI2vrp6vuwjGt5h0JGXDSvmSf4D4maVjJdw==}
+    requiresBuild: true
+    dev: true
+
   /@sveltejs/adapter-netlify/1.0.0-next.84:
     resolution: {integrity: sha512-i4vf3to0sV/iI39UPPhlVjOP+jZCZ048M4oHkqDM1FfJwACwgXaysdF2t4X0DV3loLmrkfarwbatjbGIECA9uQ==}
     dependencies:
@@ -225,8 +232,8 @@ packages:
       set-cookie-parser: 2.5.1
     dev: false
 
-  /@sveltejs/kit/1.0.0-next.564_svelte@3.53.1+vite@3.2.4:
-    resolution: {integrity: sha512-j5X8NVA+ros3YDaybsrybnsZasrsMKacAhLGll36SGkBDagCQANlY6O5B7fxP0FrejiuN6ZLh0hnROGsl5qAlQ==}
+  /@sveltejs/kit/1.0.0-next.567_svelte@3.53.1+vite@3.2.4:
+    resolution: {integrity: sha512-4Q74HPLZb9Rr60n7EJANXH2Ng3d7wwrz67TuXxVfYuxARigWO9YzjcLHxG2IVMwRZIeT+LlwOKkg9vYYdBiezQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -2104,6 +2111,15 @@ packages:
 
   /prism-svelte/0.4.7:
     resolution: {integrity: sha512-yABh19CYbM24V7aS7TuPYRNMqthxwbvx6FF/Rw920YbyBWO3tnyPIqRMgHuSVsLmuHkkBS1Akyof463FVdkeDQ==}
+    dev: true
+
+  /prisma/4.6.1:
+    resolution: {integrity: sha512-BR4itMCuzrDV4tn3e2TF+nh1zIX/RVU0isKtKoN28ADeoJ9nYaMhiuRRkFd2TZN8+l/XfYzoRKyHzUFXLQhmBQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.6.1
     dev: true
 
   /prismjs/1.29.0:

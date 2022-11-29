@@ -5,4 +5,4 @@
 </script>
 
 <h1>{locationLabel}</h1>
-<time>{time}</time>
+<time class="font-sans  text-2xl text-center">{time}</time>
