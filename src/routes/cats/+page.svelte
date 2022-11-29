@@ -5,6 +5,7 @@
 	const { cats } = data;
 </script>
 
+<h1>Cats</h1>
 <section>
 	{#each cats as cat}
 		<img src={cat.url} alt="cat" class="max-w-sm" />

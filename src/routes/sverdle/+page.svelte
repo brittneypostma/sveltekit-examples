@@ -76,86 +76,88 @@
 	<meta name="description" content="A Wordle clone written in SvelteKit" />
 </svelte:head>
 
-<h1>Sverdle</h1>
+<section>
+	<h1>Sverdle</h1>
 
-<form
-	method="POST"
-	action="?/enter"
-	use:enhance={() => {
-		// prevent default callback from resetting the form
-		return ({ update }) => {
-			update({ reset: false });
-		};
-	}}
->
-	<a class="how-to-play" href="/sverdle/how-to-play">How to play</a>
+	<form
+		method="POST"
+		action="?/enter"
+		use:enhance={() => {
+			// prevent default callback from resetting the form
+			return ({ update }) => {
+				update({ reset: false });
+			};
+		}}
+	>
+		<a class="how-to-play" href="/sverdle/how-to-play">How to play</a>
 
-	<div class="grid" class:playing={!won} class:bad-guess={form?.badGuess}>
-		{#each Array(6) as _, row}
-			{@const current = row === i}
+		<div class="grid" class:playing={!won} class:bad-guess={form?.badGuess}>
+			{#each Array(6) as _, row}
+				{@const current = row === i}
 
-			<div class="row" class:current>
-				{#each Array(5) as _, column}
-					{@const answer = data.answers[row]?.[column]}
+				<div class="row" class:current>
+					{#each Array(5) as _, column}
+						{@const answer = data.answers[row]?.[column]}
 
-					<input
-						name="guess"
-						disabled={!current}
-						readonly
-						class:exact={answer === 'x'}
-						class:close={answer === 'c'}
-						aria-selected={current && column === data.guesses[row].length}
-						value={data.guesses[row]?.[column] ?? ''}
-					/>
-				{/each}
-			</div>
-		{/each}
-	</div>
+						<input
+							name="guess"
+							disabled={!current}
+							readonly
+							class:exact={answer === 'x'}
+							class:close={answer === 'c'}
+							aria-selected={current && column === data.guesses[row].length}
+							value={data.guesses[row]?.[column] ?? ''}
+						/>
+					{/each}
+				</div>
+			{/each}
+		</div>
 
-	<div class="controls">
-		{#if won || data.answers.length >= 6}
-			{#if !won && data.answer}
-				<p>the answer was "{data.answer}"</p>
-			{/if}
-			<button data-key="enter" aria-selected="true" class="restart" formaction="?/restart">
-				{won ? 'you won :)' : `game over :(`} play again?
-			</button>
-		{:else}
-			<div class="keyboard">
-				<button data-key="enter" aria-selected={submittable} disabled={!submittable}>enter</button>
-
-				<button
-					on:click|preventDefault={update}
-					data-key="backspace"
-					formaction="?/update"
-					name="key"
-					value="backspace"
-				>
-					back
+		<div class="controls">
+			{#if won || data.answers.length >= 6}
+				{#if !won && data.answer}
+					<p>the answer was "{data.answer}"</p>
+				{/if}
+				<button data-key="enter" aria-selected="true" class="restart" formaction="?/restart">
+					{won ? 'you won :)' : `game over :(`} play again?
 				</button>
+			{:else}
+				<div class="keyboard">
+					<button data-key="enter" aria-selected={submittable} disabled={!submittable}>enter</button
+					>
 
-				{#each ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'] as row}
-					<div class="row">
-						{#each row as letter}
-							<button
-								on:click|preventDefault={update}
-								data-key={letter}
-								class={classnames[letter]}
-								disabled={data.guesses[i].length === 5}
-								formaction="?/update"
-								name="key"
-								value={letter}
-							>
-								{letter}
-							</button>
-						{/each}
-					</div>
-				{/each}
-			</div>
-		{/if}
-	</div>
-</form>
+					<button
+						on:click|preventDefault={update}
+						data-key="backspace"
+						formaction="?/update"
+						name="key"
+						value="backspace"
+					>
+						back
+					</button>
 
+					{#each ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'] as row}
+						<div class="row">
+							{#each row as letter}
+								<button
+									on:click|preventDefault={update}
+									data-key={letter}
+									class={classnames[letter]}
+									disabled={data.guesses[i].length === 5}
+									formaction="?/update"
+									name="key"
+									value={letter}
+								>
+									{letter}
+								</button>
+							{/each}
+						</div>
+					{/each}
+				</div>
+			{/if}
+		</div>
+	</form>
+</section>
 {#if won}
 	<div
 		style="position: absolute; left: 50%; top: 30%"
@@ -169,6 +171,11 @@
 {/if}
 
 <style>
+	section {
+		display: grid;
+		gap: 1rem;
+		align-items: flex-start;
+	}
 	form {
 		width: 100%;
 		height: 100%;
