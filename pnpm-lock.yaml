@@ -7,6 +7,7 @@ specifiers:
   '@fontsource/rubik-distressed': ^4.5.0
   '@neoconfetti/svelte': ^1.0.0
   '@playwright/test': 1.25.0
+  '@prisma/client': ^4.7.0
   '@sveltejs/adapter-netlify': 1.0.0-next.84
   '@sveltejs/kit': next
   '@tailwindcss/typography': ^0.5.8
@@ -45,6 +46,7 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
+  '@prisma/client': 4.7.0_prisma@4.6.1
   '@sveltejs/adapter-netlify': 1.0.0-next.84
   '@tweakpane/core': 1.1.0
   tweakpane: 3.1.0
@@ -218,6 +220,24 @@ packages:
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
+
+  /@prisma/client/4.7.0_prisma@4.6.1:
+    resolution: {integrity: sha512-keXMa0oJWJGOzMEFKp+CEgzJPwnOtGSrnTWw6qMYxnypYrRFdNxqyA06EzELZexBhgM4oLooZ1jDJ3iy46wExA==}
+    engines: {node: '>=14.17'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.7.0-74.39190b250ebc338586e25e6da45e5e783bc8a635
+      prisma: 4.6.1
+    dev: false
+
+  /@prisma/engines-version/4.7.0-74.39190b250ebc338586e25e6da45e5e783bc8a635:
+    resolution: {integrity: sha512-ImczGEQ8NS1OUApEeyAGxC4uLTtQp0wI1+2wM4MeQLVwIQbyMHk1vOhWWE8Pwbi3rnzLcPvsIrd9sm6oNXhERw==}
+    dev: false
 
   /@prisma/engines/4.6.1:
     resolution: {integrity: sha512-3u2/XxvxB+Q7cMXHnKU0CpBiUK1QWqpgiBv28YDo1zOIJE3FCF8DI2vrp6vuwjGt5h0JGXDSvmSf4D4maVjJdw==}
